@@ -1,0 +1,2 @@
+# dotvim
+My dotvim folder.
