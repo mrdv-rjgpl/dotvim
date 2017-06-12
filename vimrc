@@ -1,6 +1,4 @@
-execute pathogen#infect()
-set nu
-syntax on
-filetype plugin indent on
-
+call plug#begin('~/.vim/plugins/')
+Plug 'tpope/vim-sensible'
+call plug#end()
 nnoremap <Space> :
