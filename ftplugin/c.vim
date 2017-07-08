@@ -1,0 +1,1 @@
+inoremap { {<Enter>}<Esc>O
