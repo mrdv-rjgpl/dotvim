@@ -59,4 +59,8 @@ set foldmethod=indent
 set nofoldenable
 "New vertical windows appear on the right of the existing window
 set splitright
-
+"For there are things faster than <C-w>w"
+nnoremap <C-Left>  <C-w><Left>
+nnoremap <C-Right> <C-w><Right>
+nnoremap <C-Up>    <C-w><Up>
+nnoremap <C-Down>  <C-w><Down>
