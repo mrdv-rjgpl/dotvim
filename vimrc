@@ -11,6 +11,9 @@ set nu
 set hlsearch
 set ignorecase
 set smartcase
+"Centre the current search result.
+nnoremap n nzz
+nnoremap N Nzz
 
 "C-style indentation.
 set shiftwidth=4
