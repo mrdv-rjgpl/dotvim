@@ -36,7 +36,7 @@ hi OverLength    cterm=none      ctermfg=1  gui=none   guibg=#1E1E1E  guifg=#A94
 " File navigation / Searching
 hi Directory     cterm=none      ctermfg=4  gui=none   guibg=#1E1E1E  guifg=#569CD6
 hi Search        cterm=none      ctermfg=0  gui=none   guibg=#218693  guifg=#F7F7F7
-hi IncSearch     cterm=none      ctermfg=14 gui=none   guibg=#D69831  guifg=#F7F7F7
+hi IncSearch     cterm=none      ctermfg=0  ctermbg=14 gui=none       guibg=#D69831  guifg=#F7F7F7
 
 " Prompt / Status
 hi StatusLine    cterm=none      ctermfg=15 gui=none   guibg=#3C3C3C  guifg=#F7F7F7
