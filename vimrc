@@ -67,3 +67,10 @@ nnoremap <C-Left>  <C-w><Left>
 nnoremap <C-Right> <C-w><Right>
 nnoremap <C-Up>    <C-w><Up>
 nnoremap <C-Down>  <C-w><Down>
+
+"For exceeding 120 characters in a line"
+if exists('+colorcolumn')
+    set colorcolumn=120
+else
+    au BufWinEnter * let w:m2=matchadd('ColorColumn', '\%>120v.\+', -1)
+endif
