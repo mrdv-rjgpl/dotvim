@@ -26,6 +26,7 @@ hi CursorLineNR  cterm=none      ctermfg=0  gui=none   guibg=#A94744  guifg=#1E1
 hi CursorColumn  cterm=none      ctermfg=0  gui=none   guibg=#A94744  guifg=#1E1E1E
 hi FoldColumn    cterm=none      ctermfg=2  gui=none   guibg=#1E1E1E  guifg=#608B4E
 hi Folded        cterm=none      ctermfg=2  gui=none   guibg=#1E1E1E  guifg=#608B4E
+hi ColorColumn   cterm=none      ctermbg=8
 
 " Window / Tab delimiters
 hi TabLine       cterm=none      ctermfg=3  gui=none   guibg=#1E1E1E  guifg=#D69831
