@@ -55,7 +55,7 @@ let g:lightline = {
       \ },
       \ }
 "Ignore certain filetypes while auto-completing.
-set wildignore=*.o,*~,*.pyc,.git
+set wildignore=*.o,*~,*.pyc,*.git,*.pdf
 "Set foldmethod to fold all lines of the same or higher indent level...
 set foldmethod=indent
 "... but keep it turned off at startup
@@ -74,3 +74,6 @@ if exists('+colorcolumn')
 else
     au BufWinEnter * let w:m2=matchadd('ColorColumn', '\%>120v.\+', -1)
 endif
+
+"Adding a template for .cpp files"
+au BufNewFile *.cpp 0r ~/.vim/templates/template.cpp | let IndentStyle = "cpp"
