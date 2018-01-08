@@ -4,6 +4,8 @@ echo "Creating symbolic link for file .vimrc..."
 ln -s ~/.vim/vimrc ~/.vimrc
 echo "Installing plugins..."
 vi -c "PlugInstall | q | q"
+echo "Installing exuberant-ctags"
+sudo apt install exuberant-ctags
 echo "Installing powerline fonts..."
 git clone https://github.com/powerline/fonts.git ~/fonts
 cd ~/fonts && ./install.sh && cd ~ && rm -rf fonts
