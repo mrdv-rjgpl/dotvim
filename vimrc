@@ -81,3 +81,6 @@ au BufNewFile *.cpp 0r ~/.vim/templates/template.cpp | let IndentStyle = "cpp"
 "Adding ctags related shortcuts"
 map <C-\> :tab split<Enter>:exec("tag ".expand("<cword>"))<Enter>
 map <C-]> :vsp <Enter>:exec("tag ".expand("<cword>"))<Enter>
+
+"Adding roslaunch XML syntax highlighting"
+autocmd BufRead,BufNewFile *.launch setfiletype roslaunch
