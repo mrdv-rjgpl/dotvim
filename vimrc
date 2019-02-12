@@ -1,10 +1,3 @@
-call plug#begin('~/.vim/plugins/')
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-sensible'
-Plug 'NewProggie/NewProggie-Color-Scheme'
-call plug#end()
 nnoremap <Space> :
 set nu
 "Search related stuff.
@@ -27,33 +20,13 @@ inoremap [ []<Esc>i
 inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
 
-"Temporary map to make Simulink commits easier."
-"nnoremap f iFSW-FDS<space>name<space>matching<space>campaign:<space>Modified<space>interfaces,<space>constants,<space>and<space>data<space>command<space>parameters<space>of<Space>
-
 "Easy way to toggle paste.
 set pastetoggle=<F2>
-
-"Airline stuff
-let g:airline_powerline_fonts = 1
-let g:airline_theme='newproggie'
-
-"Theme
-colo newproggie
 
 "The following lines are courtesy praveenv253.
 "Enable characters to demarcate the kind of whitespace used.
 set listchars=extends:»,precedes:«,tab:·\ ,trail:◀
 set list
-"Add the git branch to the light status line.
-let g:lightline = {
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
-      \ },
-      \ }
 "Ignore certain filetypes while auto-completing.
 set wildignore=*.o,*~,*.pyc,*.git,*.pdf
 "Set foldmethod to fold all lines of the same or higher indent level...
@@ -69,11 +42,11 @@ nnoremap <C-Up>    <C-w><Up>
 nnoremap <C-Down>  <C-w><Down>
 
 "For exceeding 120 characters in a line"
-if exists('+colorcolumn')
-    set colorcolumn=120
-else
-    au BufWinEnter * let w:m2=matchadd('ColorColumn', '\%>120v.\+', -1)
-endif
+"if exists('+colorcolumn')
+"    set colorcolumn=120
+"else
+"    au BufWinEnter * let w:m2=matchadd('ColorColumn', '\%>120v.\+', -1)
+"endif
 
 "Adding a template for .cpp files"
 au BufNewFile *.cpp 0r ~/.vim/templates/template.cpp | let IndentStyle = "cpp"
@@ -84,3 +57,11 @@ map <C-]> :vsp <Enter>:exec("tag ".expand("<cword>"))<Enter>
 
 "Adding roslaunch XML syntax highlighting"
 autocmd BufRead,BufNewFile *.launch setfiletype roslaunch
+
+"Adding powerline related code
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
+set rtp+=/usr/local/lib/python3.5/dist-packages/powerline/bindings/vim/
+set laststatus=2
+set t_Co=256
