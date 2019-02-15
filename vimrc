@@ -20,6 +20,9 @@ inoremap [ []<Esc>i
 inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
 
+"Load a color scheme that's easier on the eye.
+colo newproggie
+
 "Easy way to toggle paste.
 set pastetoggle=<F2>
 
