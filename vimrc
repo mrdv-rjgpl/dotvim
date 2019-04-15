@@ -71,3 +71,4 @@ set t_Co=256
 
 "Splitting below"
 set splitbelow
+source $VIMRUNTIME/macros/matchit.vim
