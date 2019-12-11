@@ -46,9 +46,9 @@ nnoremap <C-Down>  <C-w><Down>
 
 "For exceeding 80 characters in a line"
 if exists('+colorcolumn')
-    set colorcolumn=80
+    set colorcolumn=81
 else
-    au BufWinEnter * let w:m2=matchadd('ColorColumn', '\%>80v.\+', -1)
+    au BufWinEnter * let w:m2=matchadd('ColorColumn', '\%>81v.\+', -1)
 endif
 
 "Adding a template for .cpp files"
