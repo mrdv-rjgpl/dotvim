@@ -1,6 +1,8 @@
 "Install NERDTree.
 call plug#begin()
 Plug 'preservim/NERDTree'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 "Because spaces are easier to type then colons
