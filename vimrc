@@ -1,9 +1,19 @@
+"Install NERDTree.
+call plug#begin()
+Plug 'preservim/NERDTree'
+call plug#end()
+
+"Because spaces are easier to type then colons
 nnoremap <Space> :
+
+"Line numbers are always helpful
 set nu
+
 "Search related stuff.
 set hlsearch
 set ignorecase
 set smartcase
+
 "Centre the current search result.
 nnoremap n nzz
 nnoremap N Nzz
@@ -26,7 +36,7 @@ filetype plugin indent on
 "Easy way to toggle paste.
 set pastetoggle=<F2>
 
-"The following lines are courtesy praveenv253.
+"The following lines are courtesy of praveenv253.
 "Enable characters to demarcate the kind of whitespace used.
 set listchars=extends:»,precedes:«,tab:·\ ,trail:◀
 set list
