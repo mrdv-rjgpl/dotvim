@@ -44,10 +44,13 @@ let g:clang_format#auto_format=1
 let g:clang_format#detect_style_file=1
 
 "Indent files on saving.
-autocmd BufWritePre,BufRead *.html :normal gg=G
-"autocmd BufWritePre,BufRead *.xml %!xmllint --format -
-autocmd FileType c,cc,cpp,h,hpp setlocal tabstop=2 shiftwidth=2 expandtab autoindent cindent smarttab
+autocmd FileType c,cc,cpp,h,hpp,cmake setlocal tabstop=2 shiftwidth=2 expandtab autoindent smarttab
+autocmd FileType matlab setlocal tabstop=4 shiftwidth=4 noexpandtab autoindent smarttab
+autocmd FileType c,cc,cpp,h,hpp setlocal cindent
 autocmd FileType xml setlocal tabstop=2 shiftwidth=2 expandtab autoindent smarttab
+autocmd FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
+autocmd BufWritePre,BufRead *.html,*xml :normal gg=G
+autocmd BufRead,BufNewFile,BufWritePre *.cmake,CMakeLists.txt runtime! ~/.vim/indent/cmake-indent.vim
 
 "Configure airline and other visual aspects to your tastes.
 colo newproggie
@@ -71,6 +74,11 @@ set hlsearch incsearch ignorecase smartcase
 "... and vertically centered.
 nnoremap n nzz
 nnoremap N Nzz
+
+"Navigating across code blocks is easier when the cursor is vertically
+"centered.
+nnoremap { {zz
+nnoremap } }zz
 
 "New windows are better off to the right and below existing windows...
 set splitright splitbelow
