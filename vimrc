@@ -10,7 +10,11 @@ Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
-Plug 'valloric/youcompleteme'
+
+if(has('patch-8.1.2269'))
+	Plug 'valloric/youcompleteme'
+endif
+
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
@@ -44,9 +48,9 @@ let g:clang_format#auto_format=1
 let g:clang_format#detect_style_file=1
 
 "Indent files on saving.
-autocmd FileType c,cc,cpp,h,hpp,cmake setlocal tabstop=2 shiftwidth=2 expandtab autoindent smarttab
+autocmd FileType c,cc,cpp,cuda,h,hpp,cmake setlocal tabstop=2 shiftwidth=2 expandtab autoindent smarttab
 autocmd FileType matlab setlocal tabstop=4 shiftwidth=4 noexpandtab autoindent smarttab
-autocmd FileType c,cc,cpp,h,hpp setlocal cindent
+autocmd FileType c,cc,cpp,cuda,h,hpp setlocal cindent
 autocmd FileType xml setlocal tabstop=2 shiftwidth=2 expandtab autoindent smarttab
 autocmd FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 autocmd BufWritePre,BufRead *.html,*xml :normal gg=G
