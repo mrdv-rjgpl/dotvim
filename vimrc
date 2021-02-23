@@ -1,6 +1,7 @@
 "Install plugins if required.
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
+Plug 'andymass/vim-matlab'
 Plug 'junegunn/fzf'
 Plug 'kana/vim-operator-user'
 Plug 'preservim/NERDTree'
