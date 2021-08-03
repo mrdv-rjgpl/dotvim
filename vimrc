@@ -1,16 +1,20 @@
 "Install plugins if required.
 call plug#begin()
-Plug 'airblade/vim-gitgutter'
+" Commented out because it is not worth the information provided.
+"Plug 'airblade/vim-gitgutter'
 Plug 'andymass/vim-matlab'
 Plug 'junegunn/fzf'
-Plug 'kana/vim-operator-user'
+"Plug 'kana/vim-operator-user'
 Plug 'preservim/NERDTree'
 Plug 'rhysd/vim-clang-format'
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/syntastic'
-Plug 'tpope/vim-fugitive'
+" Commented out because it makes Python a torture to program in on Ubuntu
+" 20.04
+"Plug 'scrooloose/syntastic'
+" Commented out because it misbehaves on Ubuntu 16.04
+"Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-surround'
+"Plug 'tpope/vim-surround'
 
 if(has('patch-8.1.2269'))
 	Plug 'valloric/youcompleteme'
