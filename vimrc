@@ -108,7 +108,7 @@ augroup filetypedetect
 augroup END
 
 "Certain filetypes are not meant to be opened in Vim.
-set wildignore=*.o,*~,*.pyc,*.git,*.pdf
+set wildignore=*.o,*~,*.pyc,*.git,*.pdf,*.ipynb
 
 "Adding ctags related shortcuts"
 map <C-\> :tab split<Enter>:exec("tag ".expand("<cword>"))<Enter>
